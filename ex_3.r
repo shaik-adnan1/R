@@ -10,7 +10,7 @@ a <- 1:10
 print(a)
 
 # 2. If Newlist <- list(a=1:10, b="Good morning", c="Hi"), write an R 
-# statement that will add 1 to each element of the first vector in Newlist.
+#statement that will add 1 to each element of the first vector in Newlist.
 
 Newlist <- list(a=1:10, b="Good morning", c="Hi")
 
@@ -19,7 +19,7 @@ Newlist$a <- Newlist$a + 1
 print(Newlist$a)
 
 # 3. Consider y <- list("a", "b", "c"), write an R statement that will 
-# assign new names "one", "two" and "three" to the elements of y.
+#assign new names "one", "two" and "three" to the elements of y.
 
 
 y <- list("a", "b", "c")
@@ -93,3 +93,17 @@ list2 <- list("b", "d", "e")
 elements_not_in_list2 <- list1[!list1 %in% list2]
 
 print(elements_not_in_list2)
+
+# Matrices
+
+# 1. Write a R program to create a matrix taking a given vector of numbers as input and define the column and row names. Display the matrix.
+
+input_vector <- c(1, 2, 3, 4, 5, 6)
+
+row_names <- c("Row1", "Row2")
+col_names <- c("Col1", "Col2", "Col3")
+
+matrix <- matrix(input_vector, nrow=2, ncol=3, byrow=TRUE, dimnames=list(row_names, col_names))
+print(matrix)
+
+# 2. 
