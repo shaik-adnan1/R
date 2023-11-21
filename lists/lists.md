@@ -1,6 +1,6 @@
 # R programming practice for lab, 
 
-# Lists
+## Lists
 
 - Lists are versatile data structures that can contain elements of different types like `numbers, strings, vectors, or even other lists`. They are created using the list()
 
@@ -36,28 +36,45 @@ print(my_list$scores <- NULL )
 
 ## Nested Lists 
 
-- `Nesting lists into lists`
-
 ```
 list1 = list(section = "A", strength = 100, list2 = list(name = "Shaik", age = 19))
 print(list1$list2["name"])
 
 ```
 
-# Strings 
+## Setting names to properties in a list
+```
+# Given list
+y <- list("a", "b", "c")
 
--  `Splitting the string` into two parts based on the space character using `strsplit(string, " ")`
+# Assigning new names to the elements of y
+names(y) <- c("one", "two", "three")
+
+# Displaying the updated list y with new names
+print(y)
 
 ```
-# Given string
-string <- "Grand Opening"
 
-# Splitting the string into two parts based on the space character
-split_string <- strsplit(string, " ")[[1]]
+## Unlisting a list
 
-# Displaying the output
-for (part in split_string) {
-  print(part)
-}
+-  convert a given list to vector using `unlist`
+```
+list1 <- list("A", "B", "C")
+
+list_to_vector <- unlist(list1)
+
+print(list_to_vector)
+
+```
+
+## program to find all `elements of a given list that are not in another given list`
+```
+
+list1 <- list("a", "b", "c", "d")
+list2 <- list("b", "d", "e")
+
+elements_not_in_list2 <- list1[!list1 %in% list2]
+
+print(elements_not_in_list2)
 
 ```
