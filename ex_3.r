@@ -106,4 +106,116 @@ col_names <- c("Col1", "Col2", "Col3")
 matrix <- matrix(input_vector, nrow=2, ncol=3, byrow=TRUE, dimnames=list(row_names, col_names))
 print(matrix)
 
-# 2. 
+
+# 2. Write a R program to access the element at 3rd column and 2nd row, only the 3rd row and only the 4th column of a given matrix
+
+mat <- matrix(1:12, nrow=3, ncol=4, byrow=TRUE)
+
+# access the element at 3rd column and 2nd row
+print(mat[2, 3])
+
+# only the 3rd row
+print(mat[3, ])
+
+
+# only the 4th column
+
+print(mat[, 4])
+
+# 3. Write a R program to create two 2x3 matrix and add, subtract, multiply and divide the matrixes
+
+
+mat1 <- matrix(1:6, nrow=2, ncol=3, byrow=TRUE)
+mat2 <- matrix(7:12, nrow=2, ncol=3, byrow=TRUE)
+
+#addition
+addition_matrix <- mat1 + mat2
+print(addition_matrix)
+
+# - `t()` transposes the matrix and %*% multiplies two matrices
+
+#multiplication
+
+multiplication_matrices <- mat1 %*% t(mat2)
+print(multiplication_matrices)
+
+# subtraction
+sub_matrices <- mat1 - mat2
+print(sub_matrices)
+
+# division 
+
+div_matrices <- mat1 / mat2
+print(div_matrices)
+
+# 4. Write a R program to create a matrix from a list of given vectors
+
+input_vector <- c("Luffy", 19, TRUE, "Garp", "Unknown", FALSE)
+
+col_names <- c("Name", "Age", "IsPirate")
+row_names <- c(1, 2)
+
+matrix3 <- matrix(input_vector, nrow=2, ncol=3, byrow=TRUE dimnames=list(row_names, col_names))
+print(matrix3)
+
+# 5. 
+
+my_matrix <- matrix(sample(1:50, 12), nrow = 3)  # Creating a 3x4 matrix with random values
+
+# Display the matrix
+print(my_matrix)
+
+# Find the row and column indices of the maximum and minimum values
+max_value <- which(my_matrix == max(my_matrix), arr.ind = TRUE)
+min_value <- which(my_matrix == min(my_matrix), arr.ind = TRUE)
+
+# Display the results
+cat("Indices of maximum value (row, column): ", max_value[1], ", ", max_value[2], "\n")
+cat("Indices of minimum value (row, column): ", min_value[1], ", ", min_value[2], "\n")
+
+# Arrays
+
+
+# 6. Write a R program to create an array of two 3x3 matrices each with 3 rows and 3 columns from two given two vectors
+
+vector1 <- 1:9
+vector2 <- 10:18
+
+# Reshaping vectors into 3x3 matrices
+matrix1 <- matrix(vector1, nrow = 3, byrow = TRUE)
+matrix2 <- matrix(vector2, nrow = 3, byrow = TRUE)
+
+# Creating an array of two 3x3 matrices
+my_array <- array(c(matrix1, matrix2), dim = c(3, 3, 2))
+
+# Displaying the array
+print(my_array)
+
+# 7. Write a R program to create an 3 dimensional array of 24 elements using the dim() function
+
+# Creating a 3-dimensional array with 24 elements using dim()
+my_array <- array(1:24, dim = c(2, 3, 4))
+
+# Displaying the array
+print(my_array)
+
+# 8. Write a R program to create an array of two 3x3 matrices each with 3 rows and 3 columns from two given two vectors. 
+ #Print the second row of the second matrix of the array and the element in the 3rd row and 3rd column of the 1st matrix
+
+vector1 <- 1:9
+vector2 <- 10:18
+
+# Reshaping vectors into 3x3 matrices
+matrix1 <- matrix(vector1, nrow = 3, byrow = TRUE)
+matrix2 <- matrix(vector2, nrow = 3, byrow = TRUE)
+
+# Creating an array of two 3x3 matrices
+my_array <- array(c(matrix1, matrix2), dim = c(3, 3, 2))
+
+# Printing the second row of the second matrix
+print("Second row of the second matrix:")
+print(my_array[2, , 2])
+
+# Printing the element in the 3rd row and 3rd column of the 1st matrix
+print("Element in the 3rd row and 3rd column of the 1st matrix:")
+print(my_array[3, 3, 1])

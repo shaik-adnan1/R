@@ -42,3 +42,20 @@ col_names <- c("Col1", "Col2", "Col3")
 
 matrix <- matrix(input_vector, nrow=2, ncol=3, byrow=TRUE, dimnames=list(row_names, col_names))
 print(matrix)
+
+# 2. Write a R program to access the element at 3rd column and 2nd row, only the 3rd row and only the 4th column of a given matrix
+
+mat <- matrix(1:12, nrow=3, ncol=4, byrow=TRUE)
+
+# access the element at 3rd column and 2nd row
+print(mat[2, 3])
+
+# only the 3rd row
+print(mat[3, ])
+
+
+# only the 4th column
+
+print(mat[, 4])
+
+
